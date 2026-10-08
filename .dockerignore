@@ -7,3 +7,26 @@ docker/postgres_data
 docker/qdrant_data
 data/runtime
 test.ipynb
+
+# Secrets, runtime state, caches and generated reports
+.env.*
+!.env.example
+*.pem
+*.key
+*.db
+*.db-*
+*.sqlite*
+.cache/
+.pytest_cache/
+.venv*/
+reports/
+**/.terraform/
+*.tfstate*
+*.tfplan
+*.tfvars
+!*.tfvars.example
+crash.log
+**/.env
+**/.env.*
+**/.cache/
+**/.pytest_cache/

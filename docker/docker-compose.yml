@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile
     container_name: telecom-assurance-app
     environment:
-      SERVICE_API_KEY: development-only
+      SERVICE_API_KEY: ${SERVICE_API_KEY:?Set SERVICE_API_KEY}
       POSTGRES_HOST: postgres
       POSTGRES_PORT: 5432
       POSTGRES_DB: telecom_db
@@ -14,9 +14,9 @@ services:
       QDRANT_URL: http://qdrant:6333
       QDRANT_COLLECTION: telecom_knowledge_base
     ports:
-      - "8000:8000"
+      - "127.0.0.1:8000:8000"
     volumes:
-      - ../data/runtime:/app/data/runtime
+      - runtime:/app/data/runtime
     depends_on:
       - postgres
       - qdrant
@@ -27,8 +27,8 @@ services:
     container_name: telecom-qdrant
 
     ports:
-      - "6333:6333"
-      - "6334:6334"
+      - "127.0.0.1:6333:6333"
+      - "127.0.0.1:6334:6334"
 
     volumes:
       - ./qdrant_data:/qdrant/storage
@@ -46,9 +46,12 @@ services:
       POSTGRES_DB: telecom_db
 
     ports:
-      - "5432:5432"
+      - "127.0.0.1:5432:5432"
 
     volumes:
       - ./postgres_data:/var/lib/postgresql/data
 
     restart: unless-stopped
+
+volumes:
+  runtime:

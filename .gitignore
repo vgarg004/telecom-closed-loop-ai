@@ -7,3 +7,32 @@
 data/runtime/
 docker/postgres_data/
 docker/qdrant_data/
+
+# Project-specific Python environment
+.venv-telecom-ai/
+
+# Local evaluation outputs
+/data/telecom_data/evaluation/rca_baseline_local.json
+
+# Secrets, runtime state, caches and generated reports
+.env.*
+!.env.example
+*.pem
+*.key
+*.db
+*.db-*
+*.sqlite*
+.cache/
+.pytest_cache/
+.venv*/
+reports/
+**/.terraform/
+*.tfstate*
+*.tfplan
+*.tfvars
+!*.tfvars.example
+crash.log
+**/.env
+**/.env.*
+**/.cache/
+**/.pytest_cache/

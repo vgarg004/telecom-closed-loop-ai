@@ -4,9 +4,11 @@ import json
 from copy import deepcopy
 from datetime import datetime, timezone
 from pathlib import Path
+from time import perf_counter
 from uuid import uuid4
 
 from src.analysis.incident import remediation_evidence_sufficient
+from src.services.observability import observe
 
 
 ACTION_CATALOG = {
@@ -64,6 +66,10 @@ def build_action_plan(rca_result):
         return None
     analysis = rca_result["analysis"]
     if not remediation_evidence_sufficient(cause, analysis):
+        return None
+    # Close competing hypotheses require investigation even if each has enough KPIs.
+    candidates = rca_result.get("candidates", [])
+    if len(candidates) > 1 and candidates[1]["score"] >= candidates[0]["score"] * 0.8:
         return None
     catalog = ACTION_CATALOG[cause]
     return {
@@ -137,6 +143,7 @@ def run_action_loop(
 ):
     """Plan, approve, simulate, verify, and roll back a corrective action."""
 
+    started = perf_counter()
     existing_plan = plan is not None
     plan = plan or build_action_plan(rca_result)
     if plan is None:
@@ -157,6 +164,14 @@ def run_action_loop(
         }
         events.append(event)
         _audit(audit_path, event)
+        telemetry_events = {
+            "ACTION_SIMULATED": ("action.simulation", "simulated"),
+            "VERIFICATION_COMPLETED": ("action.verification", "passed" if details.get("passed") else "failed"),
+            "ACTION_ROLLED_BACK": ("action.rollback", "rolled_back"),
+        }
+        if event_type in telemetry_events:
+            name, outcome = telemetry_events[event_type]
+            observe(name, outcome, started, action_id=plan["action_id"])
 
     if not existing_plan:
         record("ACTION_PLANNED", cause=plan["cause"], action=plan["action"])

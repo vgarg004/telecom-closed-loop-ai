@@ -1,0 +1,3 @@
+cell_id,timestamp,clear_time,alarm_id,alarm_name
+contradictory_alarm,2026-08-01 10:00:00,,contradictory_alarm,CELL_UNAVAILABLE
+contradictory_causes,2026-08-01 10:00:00,,contradictory_causes,RADIO_QUALITY_DEGRADATION
