@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Telecom Assurance Copilot</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #07101d;
+      --surface: #0e1b2c;
+      --surface-2: #14263a;
+      --line: #29435f;
+      --text: #edf5fc;
+      --muted: #91a8bd;
+      --accent: #43ddb8;
+      --accent-dark: #063b31;
+      --warning: #ffbf69;
+      --danger: #ff7785;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      height: 100vh;
+      overflow: hidden;
+      background: radial-gradient(circle at 85% 0, #153954 0, var(--bg) 40%);
+      color: var(--text);
+      font: 15px/1.5 Inter, ui-sans-serif, system-ui, sans-serif;
+    }
+    .app { display: grid; grid-template-columns: 300px 1fr; height: 100vh; }
+    aside { padding: 26px 20px; border-right: 1px solid var(--line); background: #081423dd; overflow: auto; }
+    .brand { font-size: 12px; color: var(--accent); font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    h1 { margin: 8px 0 4px; font-size: 24px; line-height: 1.08; }
+    h2 { margin: 24px 0 10px; font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .09em; }
+    p { color: var(--muted); }
+    label { display: block; margin: 13px 0 6px; color: var(--muted); font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .07em; }
+    input, select, textarea, button { font: inherit; }
+    input, select, textarea {
+      width: 100%; border: 1px solid var(--line); border-radius: 10px; background: #071421;
+      color: var(--text); padding: 11px 12px; outline: none;
+    }
+    input:focus, select:focus, textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px #43ddb820; }
+    .toggle { display: flex; align-items: center; gap: 9px; margin-top: 14px; color: var(--muted); }
+    .toggle input { width: auto; }
+    .sample {
+      width: 100%; margin: 6px 0; padding: 10px; text-align: left; color: var(--text);
+      background: var(--surface); border: 1px solid var(--line); border-radius: 9px; cursor: pointer;
+    }
+    .sample:hover { border-color: var(--accent); }
+    .status { margin-top: 22px; color: var(--accent); font-size: 12px; }
+    main { min-width: 0; display: flex; flex-direction: column; }
+    header { height: 72px; display: flex; align-items: center; justify-content: space-between; padding: 0 28px; border-bottom: 1px solid var(--line); }
+    header strong { font-size: 17px; }
+    header span { color: var(--muted); font-size: 12px; }
+    #messages { flex: 1; overflow-y: auto; padding: 30px max(24px, calc((100% - 900px) / 2)); }
+    .message { display: flex; gap: 12px; margin: 0 0 24px; }
+    .message.user { justify-content: flex-end; }
+    .avatar {
+      flex: 0 0 34px; height: 34px; display: grid; place-items: center; border-radius: 10px;
+      background: var(--surface-2); color: var(--accent); font-weight: 900; font-size: 12px;
+    }
+    .bubble { max-width: min(760px, 85%); padding: 15px 17px; border: 1px solid var(--line); border-radius: 4px 16px 16px 16px; background: var(--surface); white-space: pre-wrap; }
+    .user .bubble { background: var(--accent-dark); border-color: #277d69; border-radius: 16px 4px 16px 16px; }
+    .thinking { color: var(--muted); font-style: italic; }
+    .evidence { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line); }
+    .candidate { margin-top: 9px; padding: 10px 12px; border-left: 3px solid var(--accent); background: var(--surface-2); border-radius: 7px; }
+    .candidate-title { display: flex; justify-content: space-between; font-weight: 800; }
+    .candidate ul { margin: 7px 0 0; padding-left: 18px; color: var(--muted); }
+    .action-panel { margin-top: 14px; padding: 13px; border: 1px solid #7b603a; border-radius: 10px; background: #2c2418; white-space: normal; }
+    button.primary, button.action-button {
+      border: 0; border-radius: 9px; padding: 10px 14px; color: #042019;
+      background: var(--accent); font-weight: 850; cursor: pointer;
+    }
+    button.action-button { margin-top: 10px; background: var(--warning); color: #291b08; }
+    button:disabled { opacity: .55; cursor: wait; }
+    .approval { display: flex; gap: 8px; margin-top: 10px; }
+    .approval input { min-width: 0; }
+    .error { color: var(--danger); }
+    .composer { padding: 16px max(24px, calc((100% - 900px) / 2)) 24px; background: linear-gradient(transparent, var(--bg) 20%); }
+    .composer-box { display: grid; grid-template-columns: 1fr auto; gap: 10px; padding: 10px; border: 1px solid var(--line); border-radius: 15px; background: var(--surface); box-shadow: 0 18px 45px #0006; }
+    textarea { min-height: 54px; max-height: 150px; resize: vertical; border: 0; background: transparent; }
+    .composer button { align-self: end; min-width: 82px; }
+    .hint { margin: 7px 4px 0; color: var(--muted); font-size: 11px; }
+    @media (max-width: 760px) {
+      body { overflow: auto; }
+      .app { display: block; height: auto; }
+      aside { border: 0; border-bottom: 1px solid var(--line); }
+      main { height: 760px; }
+      .bubble { max-width: 92%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside>
+      <div class="brand">Service Assurance</div>
+      <h1>Telecom Copilot</h1>
+      <p>Ask about a cell incident in plain language, review the evidence, and approve a simulated response.</p>
+
+      <h2>Connection</h2>
+      <label for="apiKey">API key</label>
+      <input id="apiKey" type="password" value="development-only" autocomplete="off">
+      <label for="backend">Evidence source</label>
+      <select id="backend">
+        <option value="csv">Bundled CSV data</option>
+        <option value="postgres">PostgreSQL</option>
+      </select>
+      <label class="toggle"><input id="rag" type="checkbox"> Add Nokia/3GPP RAG guidance</label>
+
+      <h2>Try a known incident</h2>
+      <button class="sample" data-question="What happened to CELL_028_1 between 2026-08-05 07:00:00 and 2026-08-05 10:00:00?">Congestion</button>
+      <button class="sample" data-question="Why was CELL_017_1 degraded between 2026-08-10 14:00:00 and 2026-08-10 17:00:00?">Radio interference</button>
+      <button class="sample" data-question="Investigate CELL_004_3 between 2026-08-26 07:00:00 and 2026-08-26 08:00:00.">Transport degradation</button>
+      <button class="sample" data-question="Why was CELL_024_1 unavailable between 2026-08-26 21:00:00 and 2026-08-26 22:00:00?">Cell outage</button>
+      <button class="sample" data-question="What caused the degradation on CELL_010_1 between 2026-08-19 19:00:00 and 2026-08-19 21:00:00?">Configuration regression</button>
+
+      <div class="status" id="health">Checking service…</div>
+    </aside>
+
+    <main>
+      <header>
+        <strong>Incident investigation</strong>
+        <span id="context">New conversation</span>
+      </header>
+      <section id="messages" aria-live="polite"></section>
+      <section class="composer">
+        <div class="composer-box">
+          <textarea id="question" placeholder="Ask: What happened to CELL_028_1 between 2026-08-05 07:00 and 10:00?"></textarea>
+          <button class="primary" id="send">Send</button>
+        </div>
+        <div class="hint">Use a cell ID and a bounded August 2026 time window. Press Enter to send; Shift+Enter adds a new line.</div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const byId = id => document.getElementById(id);
+    let incidentId = null;
+
+    const headers = () => ({
+      "Content-Type": "application/json",
+      "X-API-Key": byId("apiKey").value
+    });
+
+    async function request(url, options = {}) {
+      const response = await fetch(url, {...options, headers: {...headers(), ...(options.headers || {})}});
+      const body = await response.json();
+      if (!response.ok) throw new Error(body.detail || `Request failed (${response.status})`);
+      return body;
+    }
+
+    function message(role, text, className = "") {
+      const row = document.createElement("div");
+      row.className = `message ${role}`;
+      const avatar = document.createElement("div");
+      avatar.className = "avatar";
+      avatar.textContent = role === "user" ? "YOU" : "AI";
+      const bubble = document.createElement("div");
+      bubble.className = `bubble ${className}`;
+      bubble.textContent = text;
+      if (role === "user") row.append(bubble, avatar); else row.append(avatar, bubble);
+      byId("messages").append(row);
+      byId("messages").scrollTop = byId("messages").scrollHeight;
+      return bubble;
+    }
+
+    function addEvidence(bubble, payload) {
+      const result = payload.result;
+      if (!result.candidates.length) return;
+      const wrapper = document.createElement("div");
+      wrapper.className = "evidence";
+      result.candidates.forEach(candidate => {
+        const card = document.createElement("div");
+        card.className = "candidate";
+        const title = document.createElement("div");
+        title.className = "candidate-title";
+        const name = document.createElement("span");
+        name.textContent = candidate.cause.replaceAll("_", " ");
+        const score = document.createElement("span");
+        score.textContent = `score ${candidate.score.toFixed(2)}`;
+        title.append(name, score);
+        const list = document.createElement("ul");
+        candidate.evidence.forEach(item => {
+          const line = document.createElement("li");
+          line.textContent = item;
+          list.append(line);
+        });
+        card.append(title, list);
+        wrapper.append(card);
+      });
+      bubble.append(wrapper);
+      addActionControls(bubble, payload.incident_id);
+    }
+
+    function addActionControls(bubble, currentIncidentId) {
+      const panel = document.createElement("div");
+      panel.className = "action-panel";
+      const description = document.createElement("div");
+      description.textContent = "A corrective action can be planned after you review the evidence.";
+      const planButton = document.createElement("button");
+      planButton.className = "action-button";
+      planButton.textContent = "Generate action plan";
+      panel.append(description, planButton);
+      bubble.append(panel);
+
+      planButton.addEventListener("click", async () => {
+        planButton.disabled = true;
+        try {
+          const planned = await request(`/api/incidents/${currentIncidentId}/actions`, {method: "POST"});
+          description.textContent = `${planned.plan.action}: ${planned.plan.expected_outcome} Risk: ${planned.plan.risk}.`;
+          planButton.remove();
+          const approval = document.createElement("div");
+          approval.className = "approval";
+          const identity = document.createElement("input");
+          identity.placeholder = "Approver identity";
+          const approve = document.createElement("button");
+          approve.className = "action-button";
+          approve.textContent = "Approve and simulate";
+          approval.append(identity, approve);
+          panel.append(approval);
+          approve.addEventListener("click", async () => {
+            if (!identity.value.trim()) { description.textContent = "Approver identity is required."; return; }
+            approve.disabled = true;
+            try {
+              const completed = await request(`/api/actions/${planned.plan.action_id}/approve`, {
+                method: "POST", body: JSON.stringify({approved_by: identity.value.trim()})
+              });
+              description.textContent = completed.status === "completed"
+                ? "Simulation completed and KPI verification passed."
+                : "Verification failed; the simulation restored the original projected metrics.";
+              approval.remove();
+            } catch (error) { description.textContent = error.message; approve.disabled = false; }
+          });
+        } catch (error) { description.textContent = error.message; planButton.disabled = false; }
+      });
+    }
+
+    async function sendQuestion(preset = null) {
+      const question = (preset || byId("question").value).trim();
+      if (!question) return;
+      byId("question").value = "";
+      message("user", question);
+      const waiting = message("assistant", "Analyzing operational evidence…", "thinking");
+      byId("send").disabled = true;
+      try {
+        const payload = await request("/api/chat", {
+          method: "POST",
+          body: JSON.stringify({
+            message: question,
+            incident_id: incidentId,
+            backend: byId("backend").value,
+            rag: byId("rag").checked
+          })
+        });
+        incidentId = payload.incident_id;
+        waiting.classList.remove("thinking");
+        waiting.textContent = payload.answer;
+        addEvidence(waiting, payload);
+        byId("context").textContent = `${payload.filters.cell_id} · ${payload.filters.start_time} → ${payload.filters.end_time}`;
+      } catch (error) {
+        waiting.classList.remove("thinking");
+        waiting.classList.add("error");
+        waiting.textContent = error.message;
+      } finally {
+        byId("send").disabled = false;
+        byId("question").focus();
+      }
+    }
+
+    byId("send").addEventListener("click", () => sendQuestion());
+    byId("question").addEventListener("keydown", event => {
+      if (event.key === "Enter" && !event.shiftKey) { event.preventDefault(); sendQuestion(); }
+    });
+    document.querySelectorAll(".sample").forEach(button => {
+      button.addEventListener("click", () => sendQuestion(button.dataset.question));
+    });
+
+    message("assistant", "Hello. Ask me what happened to a telecom cell during a specific time window. I will correlate KPIs, alarms, configuration changes, and tickets, then explain the likely cause.");
+    fetch("/health").then(response => response.json()).then(body => {
+      byId("health").textContent = `Service ${body.status} · v${body.version}`;
+    }).catch(() => { byId("health").textContent = "Service unavailable"; });
+  </script>
+</body>
+</html>

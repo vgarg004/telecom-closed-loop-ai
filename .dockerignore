@@ -1,0 +1,9 @@
+.env
+.git
+.venv
+**/__pycache__
+**/*.pyc
+docker/postgres_data
+docker/qdrant_data
+data/runtime
+test.ipynb

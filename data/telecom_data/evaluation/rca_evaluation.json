@@ -1,0 +1,511 @@
+{
+  "total": 63,
+  "correct": 63,
+  "candidate_matches": 63,
+  "results": [
+    {
+      "scenario_id": "SCN_0001",
+      "expected": "CONGESTION",
+      "predicted": "CONGESTION",
+      "confidence": 0.789,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0002",
+      "expected": "CONGESTION",
+      "predicted": "CONGESTION",
+      "confidence": 0.609,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0003",
+      "expected": "CONGESTION",
+      "predicted": "CONGESTION",
+      "confidence": 1.0,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0004",
+      "expected": "CONGESTION",
+      "predicted": "CONGESTION",
+      "confidence": 0.85,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0005",
+      "expected": "CONGESTION",
+      "predicted": "CONGESTION",
+      "confidence": 0.905,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0006",
+      "expected": "CONGESTION",
+      "predicted": "CONGESTION",
+      "confidence": 0.783,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0007",
+      "expected": "CONGESTION",
+      "predicted": "CONGESTION",
+      "confidence": 0.903,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0008",
+      "expected": "CONGESTION",
+      "predicted": "CONGESTION",
+      "confidence": 0.897,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0009",
+      "expected": "CONGESTION",
+      "predicted": "CONGESTION",
+      "confidence": 0.9,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0010",
+      "expected": "CONGESTION",
+      "predicted": "CONGESTION",
+      "confidence": 0.9,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0011",
+      "expected": "CONGESTION",
+      "predicted": "CONGESTION",
+      "confidence": 0.762,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0012",
+      "expected": "CONGESTION",
+      "predicted": "CONGESTION",
+      "confidence": 0.773,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0013",
+      "expected": "CONGESTION",
+      "predicted": "CONGESTION",
+      "confidence": 0.904,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0014",
+      "expected": "CONGESTION",
+      "predicted": "CONGESTION",
+      "confidence": 0.785,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0015",
+      "expected": "CONGESTION",
+      "predicted": "CONGESTION",
+      "confidence": 0.9,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0016",
+      "expected": "CONGESTION",
+      "predicted": "CONGESTION",
+      "confidence": 0.75,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0017",
+      "expected": "CONGESTION",
+      "predicted": "CONGESTION",
+      "confidence": 0.786,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0018",
+      "expected": "CONGESTION",
+      "predicted": "CONGESTION",
+      "confidence": 0.895,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0019",
+      "expected": "RADIO_INTERFERENCE",
+      "predicted": "RADIO_INTERFERENCE",
+      "confidence": 0.741,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0020",
+      "expected": "RADIO_INTERFERENCE",
+      "predicted": "RADIO_INTERFERENCE",
+      "confidence": 0.733,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0021",
+      "expected": "RADIO_INTERFERENCE",
+      "predicted": "RADIO_INTERFERENCE",
+      "confidence": 0.667,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0022",
+      "expected": "RADIO_INTERFERENCE",
+      "predicted": "RADIO_INTERFERENCE",
+      "confidence": 0.719,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0023",
+      "expected": "RADIO_INTERFERENCE",
+      "predicted": "RADIO_INTERFERENCE",
+      "confidence": 0.741,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0024",
+      "expected": "RADIO_INTERFERENCE",
+      "predicted": "RADIO_INTERFERENCE",
+      "confidence": 0.724,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0025",
+      "expected": "RADIO_INTERFERENCE",
+      "predicted": "RADIO_INTERFERENCE",
+      "confidence": 0.733,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0026",
+      "expected": "RADIO_INTERFERENCE",
+      "predicted": "RADIO_INTERFERENCE",
+      "confidence": 0.75,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0027",
+      "expected": "RADIO_INTERFERENCE",
+      "predicted": "RADIO_INTERFERENCE",
+      "confidence": 0.741,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0028",
+      "expected": "RADIO_INTERFERENCE",
+      "predicted": "RADIO_INTERFERENCE",
+      "confidence": 0.724,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0029",
+      "expected": "RADIO_INTERFERENCE",
+      "predicted": "RADIO_INTERFERENCE",
+      "confidence": 0.729,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0030",
+      "expected": "RADIO_INTERFERENCE",
+      "predicted": "RADIO_INTERFERENCE",
+      "confidence": 0.724,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0031",
+      "expected": "RADIO_INTERFERENCE",
+      "predicted": "RADIO_INTERFERENCE",
+      "confidence": 0.727,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0032",
+      "expected": "RADIO_INTERFERENCE",
+      "predicted": "RADIO_INTERFERENCE",
+      "confidence": 0.702,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0033",
+      "expected": "RADIO_INTERFERENCE",
+      "predicted": "RADIO_INTERFERENCE",
+      "confidence": 0.733,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0034",
+      "expected": "TRANSPORT_DEGRADATION",
+      "predicted": "TRANSPORT_DEGRADATION",
+      "confidence": 1.0,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0035",
+      "expected": "TRANSPORT_DEGRADATION",
+      "predicted": "TRANSPORT_DEGRADATION",
+      "confidence": 1.0,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0036",
+      "expected": "TRANSPORT_DEGRADATION",
+      "predicted": "TRANSPORT_DEGRADATION",
+      "confidence": 1.0,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0037",
+      "expected": "TRANSPORT_DEGRADATION",
+      "predicted": "TRANSPORT_DEGRADATION",
+      "confidence": 1.0,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0038",
+      "expected": "TRANSPORT_DEGRADATION",
+      "predicted": "TRANSPORT_DEGRADATION",
+      "confidence": 1.0,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0039",
+      "expected": "TRANSPORT_DEGRADATION",
+      "predicted": "TRANSPORT_DEGRADATION",
+      "confidence": 1.0,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0040",
+      "expected": "TRANSPORT_DEGRADATION",
+      "predicted": "TRANSPORT_DEGRADATION",
+      "confidence": 1.0,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0041",
+      "expected": "TRANSPORT_DEGRADATION",
+      "predicted": "TRANSPORT_DEGRADATION",
+      "confidence": 1.0,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0042",
+      "expected": "TRANSPORT_DEGRADATION",
+      "predicted": "TRANSPORT_DEGRADATION",
+      "confidence": 1.0,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0043",
+      "expected": "TRANSPORT_DEGRADATION",
+      "predicted": "TRANSPORT_DEGRADATION",
+      "confidence": 1.0,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0044",
+      "expected": "TRANSPORT_DEGRADATION",
+      "predicted": "TRANSPORT_DEGRADATION",
+      "confidence": 1.0,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0045",
+      "expected": "TRANSPORT_DEGRADATION",
+      "predicted": "TRANSPORT_DEGRADATION",
+      "confidence": 1.0,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0046",
+      "expected": "CELL_OUTAGE",
+      "predicted": "CELL_OUTAGE",
+      "confidence": 1.0,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0047",
+      "expected": "CELL_OUTAGE",
+      "predicted": "CELL_OUTAGE",
+      "confidence": 1.0,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0048",
+      "expected": "CELL_OUTAGE",
+      "predicted": "CELL_OUTAGE",
+      "confidence": 1.0,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0049",
+      "expected": "CELL_OUTAGE",
+      "predicted": "CELL_OUTAGE",
+      "confidence": 1.0,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0050",
+      "expected": "CELL_OUTAGE",
+      "predicted": "CELL_OUTAGE",
+      "confidence": 1.0,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0051",
+      "expected": "CELL_OUTAGE",
+      "predicted": "CELL_OUTAGE",
+      "confidence": 1.0,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0052",
+      "expected": "CELL_OUTAGE",
+      "predicted": "CELL_OUTAGE",
+      "confidence": 1.0,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0053",
+      "expected": "CELL_OUTAGE",
+      "predicted": "CELL_OUTAGE",
+      "confidence": 1.0,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0054",
+      "expected": "CONFIGURATION_REGRESSION",
+      "predicted": "CONFIGURATION_REGRESSION",
+      "confidence": 1.0,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0055",
+      "expected": "CONFIGURATION_REGRESSION",
+      "predicted": "CONFIGURATION_REGRESSION",
+      "confidence": 1.0,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0056",
+      "expected": "CONFIGURATION_REGRESSION",
+      "predicted": "CONFIGURATION_REGRESSION",
+      "confidence": 1.0,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0057",
+      "expected": "CONFIGURATION_REGRESSION",
+      "predicted": "CONFIGURATION_REGRESSION",
+      "confidence": 0.711,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0058",
+      "expected": "CONFIGURATION_REGRESSION",
+      "predicted": "CONFIGURATION_REGRESSION",
+      "confidence": 1.0,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0059",
+      "expected": "CONFIGURATION_REGRESSION",
+      "predicted": "CONFIGURATION_REGRESSION",
+      "confidence": 1.0,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0060",
+      "expected": "CONFIGURATION_REGRESSION",
+      "predicted": "CONFIGURATION_REGRESSION",
+      "confidence": 1.0,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0061",
+      "expected": "CONFIGURATION_REGRESSION",
+      "predicted": "CONFIGURATION_REGRESSION",
+      "confidence": 1.0,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0062",
+      "expected": "CONFIGURATION_REGRESSION",
+      "predicted": "CONFIGURATION_REGRESSION",
+      "confidence": 1.0,
+      "correct": true,
+      "candidate_match": true
+    },
+    {
+      "scenario_id": "SCN_0063",
+      "expected": "CONFIGURATION_REGRESSION",
+      "predicted": "CONFIGURATION_REGRESSION",
+      "confidence": 1.0,
+      "correct": true,
+      "candidate_match": true
+    }
+  ]
+}

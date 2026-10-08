@@ -1,0 +1,241 @@
+ticket_id,created_time,cell_id,priority,source,issue_summary,status
+TKT_00132,2026-08-01 02:08:00,CELL_008_3,P3,CUSTOMER_COMPLAINT,Voice quality degradation reported by multiple users.,RESOLVED
+TKT_00223,2026-08-01 08:07:00,CELL_018_3,P2,SERVICE_DESK,User reports intermittent mobile data performance.,RESOLVED
+TKT_00123,2026-08-01 10:13:00,CELL_005_1,P2,CUSTOMER_COMPLAINT,Voice quality degradation reported by multiple users.,RESOLVED
+TKT_00193,2026-08-02 02:59:00,CELL_017_2,P2,SERVICE_DESK,Customer experiencing low throughput during peak hours.,RESOLVED
+TKT_00086,2026-08-02 03:05:00,CELL_005_3,P4,SERVICE_DESK,Customer reports connectivity issue.,CLOSED
+TKT_00215,2026-08-02 05:18:00,CELL_011_3,P2,CUSTOMER_COMPLAINT,User reports intermittent mobile data performance.,RESOLVED
+TKT_00164,2026-08-02 22:05:00,CELL_022_1,P3,CUSTOMER_COMPLAINT,User reports intermittent mobile data performance.,CLOSED
+TKT_00180,2026-08-03 10:10:00,CELL_027_1,P4,SERVICE_DESK,Customer experiencing low throughput during peak hours.,RESOLVED
+TKT_00034,2026-08-03 11:29:00,CELL_011_1,P1,CUSTOMER_COMPLAINT,Multiple users reporting complete service loss in the affected area.,CLOSED
+TKT_00147,2026-08-03 12:56:00,CELL_001_2,P4,CUSTOMER_COMPLAINT,Voice quality degradation reported by multiple users.,RESOLVED
+TKT_00159,2026-08-03 14:36:00,CELL_017_1,P2,CUSTOMER_COMPLAINT,Intermittent service degradation observed.,RESOLVED
+TKT_00059,2026-08-03 17:28:00,CELL_029_1,P3,SERVICE_DESK,Customer reports connectivity issue.,RESOLVED
+TKT_00010,2026-08-03 19:12:00,CELL_035_2,P2,SERVICE_DESK,Users reporting slow data throughput and degraded service.,RESOLVED
+TKT_00038,2026-08-03 20:25:00,CELL_003_3,P1,NOC,Call mobility performance degraded after recent network activity.,CLOSED
+TKT_00145,2026-08-03 23:01:00,CELL_024_2,P2,CUSTOMER_COMPLAINT,Intermittent service degradation observed.,CLOSED
+TKT_00129,2026-08-03 23:03:00,CELL_037_2,P2,SERVICE_DESK,Customer reports connectivity issue.,CLOSED
+TKT_00176,2026-08-03 23:24:00,CELL_016_3,P2,CUSTOMER_COMPLAINT,Customer experiencing low throughput during peak hours.,CLOSED
+TKT_00231,2026-08-04 00:54:00,CELL_007_3,P4,CUSTOMER_COMPLAINT,Intermittent service degradation observed.,RESOLVED
+TKT_00235,2026-08-04 07:56:00,CELL_023_2,P4,SERVICE_DESK,Intermittent service degradation observed.,RESOLVED
+TKT_00026,2026-08-04 13:53:00,CELL_026_2,P3,SERVICE_DESK,Customer traffic experiencing high latency and intermittent packet loss.,RESOLVED
+TKT_00043,2026-08-04 21:05:00,CELL_030_2,P3,SERVICE_DESK,Intermittent service degradation observed.,RESOLVED
+TKT_00144,2026-08-04 21:25:00,CELL_023_1,P2,CUSTOMER_COMPLAINT,Intermittent service degradation observed.,RESOLVED
+TKT_00204,2026-08-04 21:47:00,CELL_014_1,P3,CUSTOMER_COMPLAINT,Intermittent service degradation observed.,RESOLVED
+TKT_00066,2026-08-05 04:45:00,CELL_005_2,P2,SERVICE_DESK,Customer experiencing low throughput during peak hours.,RESOLVED
+TKT_00001,2026-08-05 08:04:00,CELL_028_1,P2,CUSTOMER_COMPLAINT,Users reporting slow data throughput and degraded service.,RESOLVED
+TKT_00143,2026-08-05 08:29:00,CELL_008_1,P4,SERVICE_DESK,Customer reports connectivity issue.,CLOSED
+TKT_00065,2026-08-05 11:01:00,CELL_019_1,P2,SERVICE_DESK,Intermittent service degradation observed.,CLOSED
+TKT_00196,2026-08-05 11:29:00,CELL_016_3,P2,CUSTOMER_COMPLAINT,Voice quality degradation reported by multiple users.,CLOSED
+TKT_00098,2026-08-05 11:51:00,CELL_034_2,P3,CUSTOMER_COMPLAINT,Intermittent service degradation observed.,RESOLVED
+TKT_00173,2026-08-05 14:31:00,CELL_036_3,P2,CUSTOMER_COMPLAINT,Intermittent service degradation observed.,CLOSED
+TKT_00064,2026-08-05 18:56:00,CELL_027_1,P3,CUSTOMER_COMPLAINT,Voice quality degradation reported by multiple users.,RESOLVED
+TKT_00141,2026-08-05 21:47:00,CELL_013_3,P3,CUSTOMER_COMPLAINT,Voice quality degradation reported by multiple users.,CLOSED
+TKT_00011,2026-08-05 22:00:00,CELL_023_3,P2,CUSTOMER_COMPLAINT,Users reporting slow data throughput and degraded service.,CLOSED
+TKT_00219,2026-08-06 00:57:00,CELL_027_3,P2,SERVICE_DESK,Intermittent service degradation observed.,CLOSED
+TKT_00127,2026-08-06 01:10:00,CELL_025_3,P3,SERVICE_DESK,Customer experiencing low throughput during peak hours.,CLOSED
+TKT_00094,2026-08-06 05:13:00,CELL_011_1,P2,CUSTOMER_COMPLAINT,Voice quality degradation reported by multiple users.,CLOSED
+TKT_00101,2026-08-06 05:41:00,CELL_007_1,P3,CUSTOMER_COMPLAINT,Voice quality degradation reported by multiple users.,RESOLVED
+TKT_00075,2026-08-06 08:36:00,CELL_022_1,P3,SERVICE_DESK,Voice quality degradation reported by multiple users.,RESOLVED
+TKT_00073,2026-08-06 09:43:00,CELL_029_1,P4,SERVICE_DESK,User reports intermittent mobile data performance.,CLOSED
+TKT_00022,2026-08-06 11:20:00,CELL_012_1,P1,NOC,Users experiencing intermittent call drops and poor radio quality.,RESOLVED
+TKT_00089,2026-08-06 11:22:00,CELL_024_1,P4,CUSTOMER_COMPLAINT,User reports intermittent mobile data performance.,RESOLVED
+TKT_00060,2026-08-06 15:14:00,CELL_021_1,P2,CUSTOMER_COMPLAINT,Intermittent service degradation observed.,RESOLVED
+TKT_00122,2026-08-06 16:16:00,CELL_015_3,P3,SERVICE_DESK,Customer experiencing low throughput during peak hours.,RESOLVED
+TKT_00071,2026-08-06 21:19:00,CELL_019_3,P4,CUSTOMER_COMPLAINT,Customer experiencing low throughput during peak hours.,RESOLVED
+TKT_00189,2026-08-07 02:43:00,CELL_012_1,P2,SERVICE_DESK,Intermittent service degradation observed.,RESOLVED
+TKT_00155,2026-08-07 06:22:00,CELL_005_3,P2,CUSTOMER_COMPLAINT,Customer experiencing low throughput during peak hours.,RESOLVED
+TKT_00082,2026-08-07 07:18:00,CELL_009_1,P4,SERVICE_DESK,Intermittent service degradation observed.,RESOLVED
+TKT_00210,2026-08-07 07:58:00,CELL_017_1,P2,SERVICE_DESK,Customer reports connectivity issue.,RESOLVED
+TKT_00047,2026-08-07 15:01:00,CELL_019_2,P2,CUSTOMER_COMPLAINT,User reports intermittent mobile data performance.,RESOLVED
+TKT_00157,2026-08-07 17:00:00,CELL_035_2,P3,SERVICE_DESK,Customer reports connectivity issue.,RESOLVED
+TKT_00083,2026-08-07 18:43:00,CELL_012_1,P4,SERVICE_DESK,User reports intermittent mobile data performance.,RESOLVED
+TKT_00070,2026-08-08 09:52:00,CELL_039_1,P2,CUSTOMER_COMPLAINT,Intermittent service degradation observed.,RESOLVED
+TKT_00005,2026-08-08 10:48:00,CELL_004_3,P2,SERVICE_DESK,Users reporting slow data throughput and degraded service.,RESOLVED
+TKT_00182,2026-08-08 14:52:00,CELL_029_3,P4,SERVICE_DESK,Customer reports connectivity issue.,RESOLVED
+TKT_00240,2026-08-08 18:19:00,CELL_007_2,P2,CUSTOMER_COMPLAINT,Customer experiencing low throughput during peak hours.,RESOLVED
+TKT_00218,2026-08-08 19:40:00,CELL_026_2,P3,SERVICE_DESK,Intermittent service degradation observed.,CLOSED
+TKT_00009,2026-08-08 20:11:00,CELL_007_2,P2,SERVICE_DESK,Users reporting slow data throughput and degraded service.,RESOLVED
+TKT_00118,2026-08-08 21:32:00,CELL_028_1,P3,SERVICE_DESK,Intermittent service degradation observed.,CLOSED
+TKT_00172,2026-08-09 03:00:00,CELL_009_3,P2,CUSTOMER_COMPLAINT,Customer experiencing low throughput during peak hours.,RESOLVED
+TKT_00097,2026-08-09 06:12:00,CELL_022_2,P2,CUSTOMER_COMPLAINT,Voice quality degradation reported by multiple users.,RESOLVED
+TKT_00095,2026-08-09 07:31:00,CELL_027_2,P3,CUSTOMER_COMPLAINT,Customer experiencing low throughput during peak hours.,RESOLVED
+TKT_00167,2026-08-09 09:14:00,CELL_020_1,P2,SERVICE_DESK,User reports intermittent mobile data performance.,CLOSED
+TKT_00002,2026-08-09 10:22:00,CELL_011_2,P2,NOC,Users reporting slow data throughput and degraded service.,RESOLVED
+TKT_00023,2026-08-09 10:29:00,CELL_016_2,P3,NOC,Users experiencing intermittent call drops and poor radio quality.,RESOLVED
+TKT_00212,2026-08-09 13:42:00,CELL_011_1,P3,CUSTOMER_COMPLAINT,Voice quality degradation reported by multiple users.,RESOLVED
+TKT_00161,2026-08-09 14:49:00,CELL_024_1,P4,SERVICE_DESK,Intermittent service degradation observed.,RESOLVED
+TKT_00124,2026-08-09 17:10:00,CELL_002_2,P2,SERVICE_DESK,Customer experiencing low throughput during peak hours.,CLOSED
+TKT_00177,2026-08-09 17:22:00,CELL_014_1,P4,SERVICE_DESK,Voice quality degradation reported by multiple users.,RESOLVED
+TKT_00160,2026-08-09 21:26:00,CELL_012_2,P2,CUSTOMER_COMPLAINT,User reports intermittent mobile data performance.,RESOLVED
+TKT_00138,2026-08-09 23:02:00,CELL_037_2,P2,SERVICE_DESK,Voice quality degradation reported by multiple users.,CLOSED
+TKT_00054,2026-08-09 23:29:00,CELL_008_1,P3,CUSTOMER_COMPLAINT,User reports intermittent mobile data performance.,RESOLVED
+TKT_00170,2026-08-10 01:29:00,CELL_016_2,P2,SERVICE_DESK,Customer experiencing low throughput during peak hours.,CLOSED
+TKT_00041,2026-08-10 04:31:00,CELL_018_3,P3,SERVICE_DESK,User reports intermittent mobile data performance.,CLOSED
+TKT_00090,2026-08-10 08:47:00,CELL_016_2,P2,SERVICE_DESK,User reports intermittent mobile data performance.,RESOLVED
+TKT_00186,2026-08-10 10:19:00,CELL_030_2,P2,CUSTOMER_COMPLAINT,Intermittent service degradation observed.,CLOSED
+TKT_00181,2026-08-10 12:32:00,CELL_030_2,P4,CUSTOMER_COMPLAINT,Intermittent service degradation observed.,CLOSED
+TKT_00205,2026-08-10 12:55:00,CELL_033_3,P3,SERVICE_DESK,Customer reports connectivity issue.,CLOSED
+TKT_00116,2026-08-10 14:03:00,CELL_010_1,P3,SERVICE_DESK,User reports intermittent mobile data performance.,CLOSED
+TKT_00056,2026-08-10 17:27:00,CELL_036_3,P2,SERVICE_DESK,Customer reports connectivity issue.,RESOLVED
+TKT_00015,2026-08-10 18:12:00,CELL_029_2,P1,CUSTOMER_COMPLAINT,Users experiencing intermittent call drops and poor radio quality.,CLOSED
+TKT_00067,2026-08-10 18:36:00,CELL_027_2,P3,CUSTOMER_COMPLAINT,Voice quality degradation reported by multiple users.,RESOLVED
+TKT_00078,2026-08-10 19:28:00,CELL_014_2,P2,SERVICE_DESK,User reports intermittent mobile data performance.,CLOSED
+TKT_00137,2026-08-11 06:26:00,CELL_026_3,P4,SERVICE_DESK,User reports intermittent mobile data performance.,CLOSED
+TKT_00202,2026-08-11 07:51:00,CELL_012_2,P4,CUSTOMER_COMPLAINT,Intermittent service degradation observed.,CLOSED
+TKT_00045,2026-08-11 09:14:00,CELL_022_3,P2,SERVICE_DESK,Intermittent service degradation observed.,RESOLVED
+TKT_00190,2026-08-11 11:24:00,CELL_027_1,P4,CUSTOMER_COMPLAINT,Intermittent service degradation observed.,RESOLVED
+TKT_00165,2026-08-11 11:31:00,CELL_016_2,P3,CUSTOMER_COMPLAINT,Customer experiencing low throughput during peak hours.,RESOLVED
+TKT_00062,2026-08-11 17:52:00,CELL_007_3,P4,CUSTOMER_COMPLAINT,Voice quality degradation reported by multiple users.,RESOLVED
+TKT_00100,2026-08-11 21:43:00,CELL_018_3,P4,CUSTOMER_COMPLAINT,Intermittent service degradation observed.,RESOLVED
+TKT_00230,2026-08-11 21:48:00,CELL_010_2,P2,SERVICE_DESK,Customer reports connectivity issue.,RESOLVED
+TKT_00058,2026-08-11 23:36:00,CELL_035_1,P3,SERVICE_DESK,Customer reports connectivity issue.,CLOSED
+TKT_00198,2026-08-12 09:05:00,CELL_009_3,P3,SERVICE_DESK,Customer experiencing low throughput during peak hours.,CLOSED
+TKT_00237,2026-08-12 09:43:00,CELL_007_1,P2,CUSTOMER_COMPLAINT,Voice quality degradation reported by multiple users.,RESOLVED
+TKT_00234,2026-08-12 12:05:00,CELL_021_2,P2,CUSTOMER_COMPLAINT,Intermittent service degradation observed.,CLOSED
+TKT_00032,2026-08-12 14:43:00,CELL_026_2,P2,SERVICE_DESK,Multiple users reporting complete service loss in the affected area.,CLOSED
+TKT_00099,2026-08-12 17:43:00,CELL_038_3,P3,CUSTOMER_COMPLAINT,User reports intermittent mobile data performance.,CLOSED
+TKT_00018,2026-08-12 20:11:00,CELL_030_1,P1,SERVICE_DESK,Users experiencing intermittent call drops and poor radio quality.,RESOLVED
+TKT_00171,2026-08-12 22:10:00,CELL_019_3,P4,CUSTOMER_COMPLAINT,Voice quality degradation reported by multiple users.,CLOSED
+TKT_00185,2026-08-13 05:05:00,CELL_032_2,P4,SERVICE_DESK,Customer reports connectivity issue.,CLOSED
+TKT_00014,2026-08-13 12:21:00,CELL_007_3,P2,NOC,Users experiencing intermittent call drops and poor radio quality.,CLOSED
+TKT_00135,2026-08-13 15:34:00,CELL_030_1,P3,SERVICE_DESK,Voice quality degradation reported by multiple users.,CLOSED
+TKT_00052,2026-08-13 17:35:00,CELL_006_1,P4,CUSTOMER_COMPLAINT,Intermittent service degradation observed.,RESOLVED
+TKT_00031,2026-08-13 19:40:00,CELL_007_2,P1,SERVICE_DESK,Customer traffic experiencing high latency and intermittent packet loss.,CLOSED
+TKT_00216,2026-08-13 22:00:00,CELL_032_2,P2,CUSTOMER_COMPLAINT,Voice quality degradation reported by multiple users.,CLOSED
+TKT_00033,2026-08-13 22:14:00,CELL_005_3,P1,CUSTOMER_COMPLAINT,Multiple users reporting complete service loss in the affected area.,RESOLVED
+TKT_00063,2026-08-13 22:47:00,CELL_004_1,P4,CUSTOMER_COMPLAINT,Intermittent service degradation observed.,CLOSED
+TKT_00158,2026-08-14 05:55:00,CELL_030_3,P3,CUSTOMER_COMPLAINT,Customer reports connectivity issue.,CLOSED
+TKT_00076,2026-08-14 09:06:00,CELL_031_2,P3,CUSTOMER_COMPLAINT,Customer experiencing low throughput during peak hours.,CLOSED
+TKT_00146,2026-08-14 17:17:00,CELL_002_2,P4,SERVICE_DESK,User reports intermittent mobile data performance.,CLOSED
+TKT_00105,2026-08-14 20:43:00,CELL_032_3,P4,SERVICE_DESK,Intermittent service degradation observed.,CLOSED
+TKT_00004,2026-08-15 07:33:00,CELL_026_1,P2,CUSTOMER_COMPLAINT,Users reporting slow data throughput and degraded service.,CLOSED
+TKT_00048,2026-08-15 07:51:00,CELL_011_1,P3,CUSTOMER_COMPLAINT,Intermittent service degradation observed.,CLOSED
+TKT_00029,2026-08-15 09:21:00,CELL_013_2,P3,NOC,Customer traffic experiencing high latency and intermittent packet loss.,CLOSED
+TKT_00008,2026-08-15 12:12:00,CELL_030_3,P1,NOC,Users reporting slow data throughput and degraded service.,CLOSED
+TKT_00209,2026-08-15 20:09:00,CELL_039_2,P4,CUSTOMER_COMPLAINT,Customer reports connectivity issue.,CLOSED
+TKT_00166,2026-08-16 02:06:00,CELL_019_1,P4,SERVICE_DESK,Customer experiencing low throughput during peak hours.,RESOLVED
+TKT_00142,2026-08-16 04:22:00,CELL_031_2,P4,CUSTOMER_COMPLAINT,User reports intermittent mobile data performance.,RESOLVED
+TKT_00081,2026-08-16 08:59:00,CELL_001_2,P3,SERVICE_DESK,Customer reports connectivity issue.,CLOSED
+TKT_00174,2026-08-16 09:36:00,CELL_003_3,P2,SERVICE_DESK,Intermittent service degradation observed.,CLOSED
+TKT_00150,2026-08-16 10:57:00,CELL_020_1,P4,CUSTOMER_COMPLAINT,Intermittent service degradation observed.,RESOLVED
+TKT_00092,2026-08-16 11:19:00,CELL_033_3,P3,CUSTOMER_COMPLAINT,Intermittent service degradation observed.,CLOSED
+TKT_00027,2026-08-16 15:47:00,CELL_026_2,P3,SERVICE_DESK,Customer traffic experiencing high latency and intermittent packet loss.,RESOLVED
+TKT_00006,2026-08-16 16:43:00,CELL_010_2,P2,CUSTOMER_COMPLAINT,Users reporting slow data throughput and degraded service.,CLOSED
+TKT_00200,2026-08-16 18:36:00,CELL_028_3,P3,SERVICE_DESK,Customer reports connectivity issue.,CLOSED
+TKT_00168,2026-08-17 06:54:00,CELL_008_2,P2,CUSTOMER_COMPLAINT,Customer experiencing low throughput during peak hours.,RESOLVED
+TKT_00040,2026-08-17 10:56:00,CELL_029_2,P2,CUSTOMER_COMPLAINT,Call mobility performance degraded after recent network activity.,CLOSED
+TKT_00192,2026-08-17 17:25:00,CELL_021_1,P3,SERVICE_DESK,Voice quality degradation reported by multiple users.,RESOLVED
+TKT_00074,2026-08-17 19:41:00,CELL_024_2,P4,SERVICE_DESK,User reports intermittent mobile data performance.,CLOSED
+TKT_00175,2026-08-17 19:44:00,CELL_031_2,P3,CUSTOMER_COMPLAINT,Customer reports connectivity issue.,RESOLVED
+TKT_00184,2026-08-18 00:22:00,CELL_022_3,P4,SERVICE_DESK,Intermittent service degradation observed.,RESOLVED
+TKT_00206,2026-08-18 01:16:00,CELL_006_2,P2,CUSTOMER_COMPLAINT,Voice quality degradation reported by multiple users.,CLOSED
+TKT_00211,2026-08-18 08:30:00,CELL_003_3,P2,SERVICE_DESK,User reports intermittent mobile data performance.,RESOLVED
+TKT_00039,2026-08-18 11:06:00,CELL_004_1,P3,NOC,Call mobility performance degraded after recent network activity.,CLOSED
+TKT_00084,2026-08-18 14:57:00,CELL_001_1,P2,SERVICE_DESK,Voice quality degradation reported by multiple users.,CLOSED
+TKT_00220,2026-08-18 16:53:00,CELL_004_3,P2,CUSTOMER_COMPLAINT,Customer experiencing low throughput during peak hours.,RESOLVED
+TKT_00055,2026-08-18 17:58:00,CELL_010_1,P4,CUSTOMER_COMPLAINT,Customer reports connectivity issue.,RESOLVED
+TKT_00136,2026-08-18 20:00:00,CELL_024_1,P2,SERVICE_DESK,User reports intermittent mobile data performance.,CLOSED
+TKT_00049,2026-08-18 21:33:00,CELL_039_2,P2,CUSTOMER_COMPLAINT,Customer reports connectivity issue.,CLOSED
+TKT_00113,2026-08-18 23:46:00,CELL_019_1,P4,CUSTOMER_COMPLAINT,Customer experiencing low throughput during peak hours.,RESOLVED
+TKT_00187,2026-08-19 00:25:00,CELL_032_2,P2,SERVICE_DESK,Intermittent service degradation observed.,RESOLVED
+TKT_00236,2026-08-19 04:11:00,CELL_006_1,P2,SERVICE_DESK,User reports intermittent mobile data performance.,CLOSED
+TKT_00148,2026-08-19 06:44:00,CELL_002_2,P2,SERVICE_DESK,Customer experiencing low throughput during peak hours.,CLOSED
+TKT_00091,2026-08-19 06:52:00,CELL_003_3,P4,CUSTOMER_COMPLAINT,Intermittent service degradation observed.,CLOSED
+TKT_00012,2026-08-19 11:34:00,CELL_004_2,P1,CUSTOMER_COMPLAINT,Users reporting slow data throughput and degraded service.,CLOSED
+TKT_00133,2026-08-19 12:25:00,CELL_006_1,P3,CUSTOMER_COMPLAINT,Customer reports connectivity issue.,RESOLVED
+TKT_00096,2026-08-19 12:51:00,CELL_005_3,P4,CUSTOMER_COMPLAINT,User reports intermittent mobile data performance.,RESOLVED
+TKT_00103,2026-08-19 13:05:00,CELL_038_3,P4,CUSTOMER_COMPLAINT,User reports intermittent mobile data performance.,RESOLVED
+TKT_00036,2026-08-19 19:23:00,CELL_010_1,P3,CUSTOMER_COMPLAINT,Call mobility performance degraded after recent network activity.,RESOLVED
+TKT_00163,2026-08-20 01:19:00,CELL_011_1,P3,CUSTOMER_COMPLAINT,User reports intermittent mobile data performance.,RESOLVED
+TKT_00208,2026-08-20 01:49:00,CELL_028_2,P3,SERVICE_DESK,Customer reports connectivity issue.,RESOLVED
+TKT_00191,2026-08-20 09:25:00,CELL_022_3,P3,SERVICE_DESK,Intermittent service degradation observed.,RESOLVED
+TKT_00140,2026-08-20 15:48:00,CELL_035_1,P2,SERVICE_DESK,Voice quality degradation reported by multiple users.,CLOSED
+TKT_00114,2026-08-20 15:49:00,CELL_003_2,P2,SERVICE_DESK,Voice quality degradation reported by multiple users.,RESOLVED
+TKT_00221,2026-08-20 16:04:00,CELL_037_3,P4,SERVICE_DESK,Customer experiencing low throughput during peak hours.,RESOLVED
+TKT_00239,2026-08-20 22:06:00,CELL_040_2,P2,SERVICE_DESK,Voice quality degradation reported by multiple users.,CLOSED
+TKT_00019,2026-08-20 22:26:00,CELL_039_3,P3,SERVICE_DESK,Users experiencing intermittent call drops and poor radio quality.,RESOLVED
+TKT_00169,2026-08-21 01:02:00,CELL_001_1,P2,SERVICE_DESK,User reports intermittent mobile data performance.,CLOSED
+TKT_00085,2026-08-21 03:58:00,CELL_030_1,P4,SERVICE_DESK,User reports intermittent mobile data performance.,CLOSED
+TKT_00120,2026-08-21 06:15:00,CELL_005_2,P4,CUSTOMER_COMPLAINT,Voice quality degradation reported by multiple users.,RESOLVED
+TKT_00115,2026-08-21 14:29:00,CELL_006_2,P3,CUSTOMER_COMPLAINT,Voice quality degradation reported by multiple users.,RESOLVED
+TKT_00149,2026-08-21 15:14:00,CELL_023_3,P3,SERVICE_DESK,Intermittent service degradation observed.,CLOSED
+TKT_00217,2026-08-21 16:36:00,CELL_031_3,P2,SERVICE_DESK,Customer reports connectivity issue.,CLOSED
+TKT_00046,2026-08-21 21:04:00,CELL_039_2,P4,SERVICE_DESK,User reports intermittent mobile data performance.,RESOLVED
+TKT_00225,2026-08-21 22:39:00,CELL_011_2,P3,CUSTOMER_COMPLAINT,User reports intermittent mobile data performance.,RESOLVED
+TKT_00037,2026-08-22 07:23:00,CELL_031_1,P3,CUSTOMER_COMPLAINT,Call mobility performance degraded after recent network activity.,CLOSED
+TKT_00016,2026-08-22 10:06:00,CELL_026_3,P2,NOC,Users experiencing intermittent call drops and poor radio quality.,CLOSED
+TKT_00025,2026-08-22 10:06:00,CELL_007_2,P1,SERVICE_DESK,Customer traffic experiencing high latency and intermittent packet loss.,CLOSED
+TKT_00201,2026-08-22 11:33:00,CELL_016_3,P4,CUSTOMER_COMPLAINT,Intermittent service degradation observed.,CLOSED
+TKT_00028,2026-08-22 12:56:00,CELL_033_3,P2,CUSTOMER_COMPLAINT,Customer traffic experiencing high latency and intermittent packet loss.,CLOSED
+TKT_00072,2026-08-22 13:01:00,CELL_018_1,P2,CUSTOMER_COMPLAINT,Customer reports connectivity issue.,RESOLVED
+TKT_00042,2026-08-22 13:22:00,CELL_020_2,P3,SERVICE_DESK,Customer reports connectivity issue.,CLOSED
+TKT_00021,2026-08-22 14:17:00,CELL_038_3,P3,CUSTOMER_COMPLAINT,Users experiencing intermittent call drops and poor radio quality.,RESOLVED
+TKT_00020,2026-08-22 15:01:00,CELL_010_1,P2,SERVICE_DESK,Users experiencing intermittent call drops and poor radio quality.,RESOLVED
+TKT_00017,2026-08-22 18:35:00,CELL_040_2,P2,SERVICE_DESK,Users experiencing intermittent call drops and poor radio quality.,RESOLVED
+TKT_00080,2026-08-22 21:34:00,CELL_029_2,P4,SERVICE_DESK,Customer reports connectivity issue.,RESOLVED
+TKT_00154,2026-08-22 21:48:00,CELL_006_1,P4,SERVICE_DESK,Customer experiencing low throughput during peak hours.,CLOSED
+TKT_00110,2026-08-22 22:40:00,CELL_007_2,P3,SERVICE_DESK,Intermittent service degradation observed.,RESOLVED
+TKT_00238,2026-08-23 01:29:00,CELL_010_3,P3,CUSTOMER_COMPLAINT,User reports intermittent mobile data performance.,CLOSED
+TKT_00013,2026-08-23 10:28:00,CELL_002_3,P3,CUSTOMER_COMPLAINT,Users reporting slow data throughput and degraded service.,RESOLVED
+TKT_00125,2026-08-23 11:22:00,CELL_019_2,P3,CUSTOMER_COMPLAINT,Voice quality degradation reported by multiple users.,RESOLVED
+TKT_00134,2026-08-23 13:17:00,CELL_035_1,P3,CUSTOMER_COMPLAINT,Customer experiencing low throughput during peak hours.,CLOSED
+TKT_00183,2026-08-23 16:35:00,CELL_009_3,P4,SERVICE_DESK,Customer experiencing low throughput during peak hours.,RESOLVED
+TKT_00207,2026-08-23 17:54:00,CELL_011_2,P4,SERVICE_DESK,Voice quality degradation reported by multiple users.,CLOSED
+TKT_00195,2026-08-23 20:03:00,CELL_032_2,P4,CUSTOMER_COMPLAINT,Voice quality degradation reported by multiple users.,CLOSED
+TKT_00233,2026-08-23 22:56:00,CELL_014_3,P3,SERVICE_DESK,Intermittent service degradation observed.,CLOSED
+TKT_00203,2026-08-24 11:25:00,CELL_029_2,P4,SERVICE_DESK,Intermittent service degradation observed.,RESOLVED
+TKT_00130,2026-08-24 19:20:00,CELL_028_1,P4,SERVICE_DESK,Customer experiencing low throughput during peak hours.,CLOSED
+TKT_00093,2026-08-25 00:36:00,CELL_022_1,P3,SERVICE_DESK,Voice quality degradation reported by multiple users.,CLOSED
+TKT_00131,2026-08-25 06:06:00,CELL_038_2,P4,SERVICE_DESK,Customer reports connectivity issue.,RESOLVED
+TKT_00112,2026-08-25 07:22:00,CELL_025_1,P4,CUSTOMER_COMPLAINT,Voice quality degradation reported by multiple users.,CLOSED
+TKT_00179,2026-08-25 08:52:00,CELL_036_2,P3,CUSTOMER_COMPLAINT,Voice quality degradation reported by multiple users.,CLOSED
+TKT_00107,2026-08-25 14:18:00,CELL_036_2,P2,CUSTOMER_COMPLAINT,Customer reports connectivity issue.,RESOLVED
+TKT_00035,2026-08-25 14:53:00,CELL_004_2,P2,CUSTOMER_COMPLAINT,Multiple users reporting complete service loss in the affected area.,RESOLVED
+TKT_00199,2026-08-25 17:14:00,CELL_027_1,P3,CUSTOMER_COMPLAINT,Voice quality degradation reported by multiple users.,RESOLVED
+TKT_00197,2026-08-25 20:24:00,CELL_006_3,P2,SERVICE_DESK,Customer experiencing low throughput during peak hours.,RESOLVED
+TKT_00030,2026-08-25 21:30:00,CELL_001_1,P3,NOC,Customer traffic experiencing high latency and intermittent packet loss.,CLOSED
+TKT_00079,2026-08-25 22:03:00,CELL_019_3,P3,CUSTOMER_COMPLAINT,User reports intermittent mobile data performance.,RESOLVED
+TKT_00003,2026-08-25 22:14:00,CELL_029_3,P1,CUSTOMER_COMPLAINT,Users reporting slow data throughput and degraded service.,RESOLVED
+TKT_00232,2026-08-26 03:49:00,CELL_026_2,P2,SERVICE_DESK,User reports intermittent mobile data performance.,CLOSED
+TKT_00214,2026-08-26 03:55:00,CELL_035_1,P2,CUSTOMER_COMPLAINT,Customer reports connectivity issue.,RESOLVED
+TKT_00102,2026-08-26 04:09:00,CELL_014_1,P3,CUSTOMER_COMPLAINT,Intermittent service degradation observed.,CLOSED
+TKT_00051,2026-08-26 04:41:00,CELL_027_1,P3,SERVICE_DESK,Voice quality degradation reported by multiple users.,CLOSED
+TKT_00104,2026-08-26 05:11:00,CELL_024_3,P4,CUSTOMER_COMPLAINT,Customer experiencing low throughput during peak hours.,CLOSED
+TKT_00108,2026-08-26 06:22:00,CELL_031_3,P3,CUSTOMER_COMPLAINT,User reports intermittent mobile data performance.,RESOLVED
+TKT_00024,2026-08-26 07:12:00,CELL_004_3,P1,NOC,Customer traffic experiencing high latency and intermittent packet loss.,CLOSED
+TKT_00128,2026-08-26 17:54:00,CELL_013_1,P4,CUSTOMER_COMPLAINT,User reports intermittent mobile data performance.,CLOSED
+TKT_00088,2026-08-26 22:51:00,CELL_027_2,P4,CUSTOMER_COMPLAINT,Intermittent service degradation observed.,CLOSED
+TKT_00188,2026-08-27 00:05:00,CELL_023_2,P2,SERVICE_DESK,Voice quality degradation reported by multiple users.,CLOSED
+TKT_00061,2026-08-27 01:15:00,CELL_024_3,P4,CUSTOMER_COMPLAINT,Intermittent service degradation observed.,RESOLVED
+TKT_00153,2026-08-27 02:06:00,CELL_030_3,P2,SERVICE_DESK,Voice quality degradation reported by multiple users.,RESOLVED
+TKT_00162,2026-08-27 07:46:00,CELL_006_2,P4,SERVICE_DESK,Customer reports connectivity issue.,RESOLVED
+TKT_00156,2026-08-27 14:27:00,CELL_019_2,P3,SERVICE_DESK,Voice quality degradation reported by multiple users.,CLOSED
+TKT_00222,2026-08-27 17:41:00,CELL_013_1,P2,SERVICE_DESK,Voice quality degradation reported by multiple users.,CLOSED
+TKT_00151,2026-08-27 18:02:00,CELL_019_1,P2,CUSTOMER_COMPLAINT,User reports intermittent mobile data performance.,CLOSED
+TKT_00068,2026-08-27 18:30:00,CELL_007_2,P4,SERVICE_DESK,Voice quality degradation reported by multiple users.,RESOLVED
+TKT_00077,2026-08-27 20:01:00,CELL_028_1,P3,CUSTOMER_COMPLAINT,Voice quality degradation reported by multiple users.,RESOLVED
+TKT_00152,2026-08-28 02:05:00,CELL_014_2,P4,CUSTOMER_COMPLAINT,Customer reports connectivity issue.,CLOSED
+TKT_00178,2026-08-28 06:52:00,CELL_028_1,P3,CUSTOMER_COMPLAINT,User reports intermittent mobile data performance.,CLOSED
+TKT_00121,2026-08-28 08:47:00,CELL_026_2,P3,SERVICE_DESK,Customer experiencing low throughput during peak hours.,CLOSED
+TKT_00224,2026-08-28 12:39:00,CELL_026_3,P2,SERVICE_DESK,Customer reports connectivity issue.,RESOLVED
+TKT_00126,2026-08-28 13:56:00,CELL_022_1,P2,CUSTOMER_COMPLAINT,Customer experiencing low throughput during peak hours.,RESOLVED
+TKT_00227,2026-08-28 21:35:00,CELL_037_3,P2,SERVICE_DESK,Customer experiencing low throughput during peak hours.,CLOSED
+TKT_00228,2026-08-29 02:43:00,CELL_002_2,P4,SERVICE_DESK,Intermittent service degradation observed.,RESOLVED
+TKT_00109,2026-08-29 06:00:00,CELL_019_2,P3,CUSTOMER_COMPLAINT,User reports intermittent mobile data performance.,CLOSED
+TKT_00007,2026-08-29 08:27:00,CELL_035_2,P2,SERVICE_DESK,Users reporting slow data throughput and degraded service.,CLOSED
+TKT_00139,2026-08-29 11:45:00,CELL_007_3,P4,CUSTOMER_COMPLAINT,User reports intermittent mobile data performance.,RESOLVED
+TKT_00044,2026-08-29 15:31:00,CELL_020_3,P4,CUSTOMER_COMPLAINT,Customer experiencing low throughput during peak hours.,RESOLVED
+TKT_00050,2026-08-29 17:53:00,CELL_017_2,P4,SERVICE_DESK,Intermittent service degradation observed.,RESOLVED
+TKT_00111,2026-08-29 18:32:00,CELL_017_1,P2,SERVICE_DESK,User reports intermittent mobile data performance.,CLOSED
+TKT_00057,2026-08-29 22:20:00,CELL_039_2,P2,CUSTOMER_COMPLAINT,User reports intermittent mobile data performance.,RESOLVED
+TKT_00106,2026-08-29 22:27:00,CELL_018_2,P4,CUSTOMER_COMPLAINT,Customer experiencing low throughput during peak hours.,RESOLVED
+TKT_00069,2026-08-29 23:11:00,CELL_026_1,P3,SERVICE_DESK,Intermittent service degradation observed.,RESOLVED
+TKT_00213,2026-08-30 01:57:00,CELL_013_2,P3,CUSTOMER_COMPLAINT,Customer experiencing low throughput during peak hours.,CLOSED
+TKT_00053,2026-08-30 07:17:00,CELL_026_2,P2,SERVICE_DESK,Voice quality degradation reported by multiple users.,RESOLVED
+TKT_00087,2026-08-30 07:19:00,CELL_015_3,P4,CUSTOMER_COMPLAINT,Customer experiencing low throughput during peak hours.,CLOSED
+TKT_00194,2026-08-30 08:53:00,CELL_015_2,P2,SERVICE_DESK,User reports intermittent mobile data performance.,RESOLVED
+TKT_00226,2026-08-30 09:55:00,CELL_015_1,P3,SERVICE_DESK,Voice quality degradation reported by multiple users.,RESOLVED
+TKT_00117,2026-08-30 10:05:00,CELL_034_1,P2,SERVICE_DESK,User reports intermittent mobile data performance.,CLOSED
+TKT_00119,2026-08-30 12:59:00,CELL_039_2,P4,CUSTOMER_COMPLAINT,Customer reports connectivity issue.,CLOSED
+TKT_00229,2026-08-30 23:53:00,CELL_021_1,P2,CUSTOMER_COMPLAINT,Intermittent service degradation observed.,CLOSED
