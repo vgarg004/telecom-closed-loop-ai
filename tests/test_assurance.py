@@ -3,7 +3,7 @@ from datetime import datetime
 from pathlib import Path
 from tempfile import TemporaryDirectory
 import pandas as pd
-from src.actions import run_action_loop
+from src.actions import run_action_loop, build_action_plan
 from src.analysis.incident import EvidenceStore, analyze_evidence, diagnose, collect_evidence
 from src.workflows.assurance import build_assurance_graph
 
@@ -70,6 +70,60 @@ class AssuranceTests(unittest.TestCase):
         })["result"]
         self.assertEqual(congestion["likely_cause"], "CONGESTION")
         self.assertEqual(regression["likely_cause"], "CONFIGURATION_REGRESSION")
+
+    def test_marginal_kpi_without_corroboration_does_not_produce_action_plan(self):
+        analysis = {
+            "cell_id": "TEST-CELL-001",
+            "metrics": {"latency_ms": 41},
+            "start_time": "2026-10-08T10:00:00",
+            "end_time": "2026-10-08T11:00:00",
+            "alarm_signals": [],
+            "preceding_relevant_changes": [],
+            "tickets": [],
+        }
+
+        rca = diagnose(analysis)
+
+        self.assertEqual(rca["likely_cause"], "TRANSPORT_DEGRADATION")
+        self.assertIsNone(build_action_plan(rca))
+
+    def test_transport_planning_requires_cause_specific_support(self):
+        cases = [
+            ({"latency_ms": 41, "packet_loss_pct": 2}, [], [], [], True),
+            ({"latency_ms": 41}, [{"alarm_name": "TRANSPORT_PACKET_LOSS", "cause": "TRANSPORT_DEGRADATION", "primary": True, "alarm_id": "A", "timestamp": "2026-10-08T10:00:00"}], [], [], True),
+            ({"latency_ms": 41}, [], [{"issue_summary": "Packet loss reported"}], [], True),
+            ({"latency_ms": 41}, [{"alarm_name": "MINOR_VSWR_WARNING", "cause": "RADIO_INTERFERENCE", "primary": False, "alarm_id": "A", "timestamp": "2026-10-08T10:00:00"}], [{"issue_summary": "Billing question"}], [{"change_id": "CH1"}], False),
+            ({"latency_ms": 41, "packet_loss_pct": float("nan")}, [], [], [], False),
+            ({"latency_ms": 41, "packet_loss_pct": None}, [], [], [], False),
+        ]
+        for metrics, alarms, tickets, changes, eligible in cases:
+            with self.subTest(metrics=metrics, alarms=alarms, tickets=tickets):
+                result = diagnose({
+                    "cell_id": "TEST-CELL", "metrics": metrics,
+                    "start_time": "2026-10-08T10:00:00",
+                    "alarm_signals": alarms, "tickets": tickets,
+                    "preceding_relevant_changes": changes,
+                })
+                self.assertEqual(result["likely_cause"], "TRANSPORT_DEGRADATION")
+                self.assertEqual(build_action_plan(result) is not None, eligible)
+
+    def test_serious_outage_remains_eligible_without_corroboration(self):
+        result = diagnose({
+            "cell_id": "TEST-CELL", "metrics": {"availability_pct": 0},
+            "start_time": "2026-10-08T10:00:00",
+        })
+        plan = build_action_plan(result)
+        self.assertEqual(plan["action"], "RESTART_CELL_SERVICE")
+        self.assertTrue(plan["approval_required"])
+        self.assertTrue(plan["reversible"])
+
+    def test_incomplete_manual_rca_does_not_bypass_planning_gate(self):
+        for metrics in ({}, {"latency_ms": 41}):
+            with self.subTest(metrics=metrics):
+                self.assertIsNone(build_action_plan({
+                    "likely_cause": "TRANSPORT_DEGRADATION", "confidence": 1.0,
+                    "analysis": {"cell_id": "TEST-CELL", "metrics": metrics},
+                }))
 
     def test_action_requires_approval_then_completes(self):
         rca = {

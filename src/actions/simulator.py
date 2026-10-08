@@ -6,6 +6,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from uuid import uuid4
 
+from src.analysis.incident import remediation_evidence_sufficient
+
 
 ACTION_CATALOG = {
     "CONGESTION": {
@@ -61,6 +63,8 @@ def build_action_plan(rca_result):
     if cause not in ACTION_CATALOG:
         return None
     analysis = rca_result["analysis"]
+    if not remediation_evidence_sufficient(cause, analysis):
+        return None
     catalog = ACTION_CATALOG[cause]
     return {
         "action_id": str(uuid4()),
@@ -138,7 +142,7 @@ def run_action_loop(
     if plan is None:
         return {
             "status": "no_action_available",
-            "reason": "No supported RCA candidate was available.",
+            "reason": "No supported RCA candidate with sufficient remediation evidence was available.",
         }
 
     events = []
