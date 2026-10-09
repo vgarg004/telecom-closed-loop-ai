@@ -1,0 +1,6 @@
+region                   = "us-east-1"
+vpc_id                   = "vpc-REPLACE"
+private_subnet_ids       = ["subnet-REPLACE"]
+client_security_group_id = "sg-REPLACE"
+api_key_secret_arn       = "arn:aws:secretsmanager:us-east-1:123456789012:secret:REPLACE"
+image_digest             = "sha256:REPLACE_WITH_64_HEX_CHARACTERS"

@@ -2,6 +2,8 @@
 
 from datetime import datetime, timedelta
 from pathlib import Path
+from math import isfinite
+from operator import ge, gt, lt
 
 import pandas as pd
 
@@ -68,6 +70,65 @@ RECOMMENDATIONS = {
     "RADIO_INTERFERENCE": "Inspect spectrum interference, radio quality and antenna alarms.",
     "CONFIGURATION_REGRESSION": "Compare recent parameter changes with the approved configuration; assess rollback.",
 }
+
+
+# Shared diagnostic thresholds: planning counts distinct measurements, not score share.
+KPI_RULES = (
+    ("CELL_OUTAGE", "availability_pct", lt, 50, "Mean availability below 50%", 5.0),
+    ("TRANSPORT_DEGRADATION", "latency_ms", gt, 40, "Mean latency above 40 ms", 1.5),
+    ("TRANSPORT_DEGRADATION", "packet_loss_pct", gt, 1, "Mean packet loss above 1%", 2.5),
+    ("CONGESTION", "dl_prb_utilization", gt, 85, "Mean downlink PRB utilization above 85%", 3.0),
+    ("RADIO_INTERFERENCE", "sinr_db", lt, 12, "Mean SINR below 12 dB", 2.5),
+    ("RADIO_INTERFERENCE", "rsrp_dbm", lt, -95, "Mean RSRP below -95 dBm", 2.0),
+    ("CONFIGURATION_REGRESSION", "handover_success_rate", lt, 93, "Mean handover success below 93%", 2.5),
+    ("CONFIGURATION_REGRESSION", "call_drop_rate", gt, 2, "Mean call drop rate above 2%", 1.0),
+)
+
+
+def _breached(metrics, metric, compare, threshold):
+    value = metrics.get(metric)
+    return isinstance(value, (int, float)) and isfinite(value) and compare(value, threshold)
+
+
+def remediation_evidence_sufficient(cause, analysis):
+    """Conservative planning policy, independent of normalized heuristic confidence.
+
+    Require two cause-specific KPI breaches, or one plus mapped alarm, matching
+    ticket text, or (for configuration regression only) a preceding relevant change.
+    Standalone severe availability loss (<50%) and near-saturated PRB (>=95%,
+    at most 5% headroom) remain eligible. Missing/nonfinite metrics never count.
+    Legacy hand-built RCA fixtures use the same raw-evidence policy; their omitted
+    event collections count as empty, with no exemption for missing candidates.
+    This permits investigation-only results for severe single transport/radio KPIs.
+    """
+    metrics = analysis.get("metrics", {})
+    if cause == "CELL_OUTAGE" and _breached(metrics, "availability_pct", lt, 50):
+        return True
+    if cause == "CONGESTION" and _breached(metrics, "dl_prb_utilization", ge, 95):
+        return True
+    breaches = sum(
+        _breached(metrics, metric, compare, threshold)
+        for rule_cause, metric, compare, threshold, _, _ in KPI_RULES
+        if rule_cause == cause
+    )
+    if breaches >= 2:
+        return True
+    if not breaches:
+        return False
+    matching_alarm = any(
+        ALARM_CAUSE_MAP.get(signal.get("alarm_name")) == cause
+        and signal.get("cause") == cause
+        for signal in analysis.get("alarm_signals", [])
+    )
+    matching_ticket = any(
+        keyword in str(ticket.get("issue_summary", "")).lower()
+        for ticket in analysis.get("tickets", [])
+        for keyword in TICKET_KEYWORDS.get(cause, ())
+    )
+    matching_change = cause == "CONFIGURATION_REGRESSION" and bool(
+        analysis.get("preceding_relevant_changes", [])
+    )
+    return matching_alarm or matching_ticket or matching_change
 
 
 class EvidenceStore:
@@ -306,54 +367,8 @@ def diagnose(analysis):
             score_by_cause[cause] += weight
             evidence_by_cause[cause].append(reason)
 
-    add_kpi(
-        "CELL_OUTAGE",
-        metrics.get("availability_pct", 100) < 50,
-        "Mean availability below 50%",
-        5.0,
-    )
-    add_kpi(
-        "TRANSPORT_DEGRADATION",
-        metrics.get("latency_ms", 0) > 40,
-        "Mean latency above 40 ms",
-        1.5,
-    )
-    add_kpi(
-        "TRANSPORT_DEGRADATION",
-        metrics.get("packet_loss_pct", 0) > 1,
-        "Mean packet loss above 1%",
-        2.5,
-    )
-    add_kpi(
-        "CONGESTION",
-        metrics.get("dl_prb_utilization", 0) > 85,
-        "Mean downlink PRB utilization above 85%",
-        3.0,
-    )
-    add_kpi(
-        "RADIO_INTERFERENCE",
-        metrics.get("sinr_db", 100) < 12,
-        "Mean SINR below 12 dB",
-        2.5,
-    )
-    add_kpi(
-        "RADIO_INTERFERENCE",
-        metrics.get("rsrp_dbm", 0) < -95,
-        "Mean RSRP below -95 dBm",
-        2.0,
-    )
-    add_kpi(
-        "CONFIGURATION_REGRESSION",
-        metrics.get("handover_success_rate", 100) < 93,
-        "Mean handover success below 93%",
-        2.5,
-    )
-    add_kpi(
-        "CONFIGURATION_REGRESSION",
-        metrics.get("call_drop_rate", 0) > 2,
-        "Mean call drop rate above 2%",
-        1.0,
-    )
+    for cause, metric, compare, threshold, reason, weight in KPI_RULES:
+        add_kpi(cause, _breached(metrics, metric, compare, threshold), reason, weight)
 
     start = pd.Timestamp(analysis["start_time"])
     end = pd.Timestamp(analysis.get("end_time", start + pd.Timedelta(hours=1)))

@@ -21,6 +21,11 @@ class IncidentStore:
         connection.row_factory = sqlite3.Row
         return connection
 
+    def check_health(self):
+        """Check database access and schema without modifying incident state."""
+        with self._connect() as connection:
+            connection.execute("SELECT incident_id FROM incidents LIMIT 1").fetchone()
+
     def _initialize(self):
         with self._connect() as connection:
             connection.executescript(
@@ -122,13 +127,31 @@ class IncidentStore:
             else None,
         }
 
+    def claim_action(self, action_id, approved_by):
+        """Commit a single-winner claim before execution, across SQLite connections.
+
+        Executing actions are never reclaimed automatically: a crash can leave
+        execution outcome unknown and requires operator reconciliation.
+        """
+        with self._connect() as connection:
+            cursor = connection.execute(
+                """
+                UPDATE action_plans
+                SET status = 'executing', approved_by = ?, result_json = NULL
+                WHERE action_id = ? AND status = 'awaiting_approval'
+                """,
+                (approved_by, action_id),
+            )
+            claimed = cursor.rowcount == 1
+        return claimed
+
     def complete_action(self, action_id, approved_by, action_result):
         with self._connect() as connection:
             connection.execute(
                 """
                 UPDATE action_plans
                 SET status = ?, approved_by = ?, result_json = ?
-                WHERE action_id = ?
+                WHERE action_id = ? AND status = 'executing'
                 """,
                 (
                     action_result["status"],

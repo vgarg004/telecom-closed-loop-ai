@@ -1,0 +1,10 @@
+cell_id,timestamp,dl_prb_utilization,call_drop_rate,handover_success_rate,dl_throughput_mbps,availability_pct,latency_ms,packet_loss_pct,rsrp_dbm,sinr_db
+healthy,2026-08-01 10:00:00,40,0,99,50,100,10,0,-80,20
+weak_latency,2026-08-01 10:00:00,40,0,99,50,100,41,0,-80,20
+weak_radio,2026-08-01 10:00:00,40,0,99,50,100,10,0,-80,11
+weak_congestion,2026-08-01 10:00:00,86,0,99,50,100,10,0,-80,20
+weak_config,2026-08-01 10:00:00,40,2.1,99,50,100,10,0,-80,20
+ambiguous,2026-08-01 10:00:00,40,0,99,50,100,60,2,-100,8
+contradictory_alarm,2026-08-01 10:00:00,40,0,99,50,100,10,0,-80,20
+contradictory_causes,2026-08-01 10:00:00,40,0,99,50,100,41,0,-80,20
+supported_transport,2026-08-01 10:00:00,40,0,99,50,100,60,2,-80,20

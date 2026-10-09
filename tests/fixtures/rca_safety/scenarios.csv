@@ -1,0 +1,11 @@
+scenario_id,cell_id,scenario_type,start_time,end_time,case_category,expected_plan
+healthy,healthy,NO_CAUSE,2026-08-01 10:00:00,2026-08-01 11:00:00,negative,forbidden
+missing,missing,NO_CAUSE,2026-08-01 10:00:00,2026-08-01 11:00:00,negative,forbidden
+weak_latency,weak_latency,TRANSPORT_DEGRADATION,2026-08-01 10:00:00,2026-08-01 11:00:00,weak,forbidden
+weak_radio,weak_radio,RADIO_INTERFERENCE,2026-08-01 10:00:00,2026-08-01 11:00:00,weak,forbidden
+weak_congestion,weak_congestion,CONGESTION,2026-08-01 10:00:00,2026-08-01 11:00:00,weak,forbidden
+weak_config,weak_config,CONFIGURATION_REGRESSION,2026-08-01 10:00:00,2026-08-01 11:00:00,weak,forbidden
+ambiguous,ambiguous,,2026-08-01 10:00:00,2026-08-01 11:00:00,ambiguous,forbidden
+contradictory_alarm,contradictory_alarm,,2026-08-01 10:00:00,2026-08-01 11:00:00,contradictory,forbidden
+contradictory_causes,contradictory_causes,,2026-08-01 10:00:00,2026-08-01 11:00:00,contradictory,forbidden
+supported_transport,supported_transport,TRANSPORT_DEGRADATION,2026-08-01 10:00:00,2026-08-01 11:00:00,positive,allowed
